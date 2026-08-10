@@ -212,26 +212,32 @@ code {
   padding-top: 2rem;
 }
 
-.site-links {
+.side-links {
+  position: fixed;
+  top: 2rem;
+  left: 1.5rem;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 0.5rem 1rem;
-  padding: 0.5rem 1.5rem 0;
-  max-width: 48rem;
-  margin: 0 auto;
-  font-size: 0.8rem;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: 0.85rem;
 }
 
-.site-links a {
+.side-links a {
   text-decoration: none;
   color: #555;
   white-space: nowrap;
 }
 
-.site-links a:hover {
+.side-links a:hover {
   color: var(--accent);
   text-decoration: underline;
+}
+
+@media (width <= 60rem) {
+  .side-links {
+    position: static;
+    padding: 0.75rem 1.5rem 0;
+  }
 }
 
 footer {
