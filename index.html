@@ -23,8 +23,11 @@
           script file required.
         </p>
         <figure class="example" aria-label="A worked example">
-          <pre><code>$ curl -s https://api.github.com/repos/jqlang/jq | jq '.stargazers_count'
+          <div class="code-block">
+            <pre><code>$ curl -s https://api.github.com/repos/jqlang/jq | jq '.stargazers_count'
 31842</code></pre>
+            <button type="button" class="copy-code" aria-label="Copy code">Copy</button>
+          </div>
         </figure>
         <div class="cta-row">
           <a class="button primary" href="https://jqplay.org/">Try it online</a>
@@ -50,19 +53,28 @@
         <div class="recipe-grid">
           <article class="recipe">
             <h3>Pretty-print anything</h3>
-            <pre><code>echo '{"a":1,"b":[2,3]}' | jq .</code></pre>
+            <div class="code-block">
+              <pre><code>echo '{"a":1,"b":[2,3]}' | jq .</code></pre>
+              <button type="button" class="copy-code" aria-label="Copy code">Copy</button>
+            </div>
             <p>No arguments needed — bare <code>jq .</code> reformats compact
               JSON into something a human can read.</p>
           </article>
           <article class="recipe">
             <h3>Pull out one field</h3>
-            <pre><code>jq '.user.login' event.json</code></pre>
+            <div class="code-block">
+              <pre><code>jq '.user.login' event.json</code></pre>
+              <button type="button" class="copy-code" aria-label="Copy code">Copy</button>
+            </div>
             <p>Dot-paths walk into nested objects the same way you'd write
               them in JavaScript, minus the semicolons.</p>
           </article>
           <article class="recipe">
             <h3>Filter a list</h3>
-            <pre><code>jq '.[] | select(.stars > 100)' repos.json</code></pre>
+            <div class="code-block">
+              <pre><code>jq '.[] | select(.stars > 100)' repos.json</code></pre>
+              <button type="button" class="copy-code" aria-label="Copy code">Copy</button>
+            </div>
             <p><code>select()</code> turns an array into just the elements
               that pass a test — the workhorse of most real one-liners.</p>
           </article>
@@ -88,6 +100,29 @@
           the manual, and everything else jq actually needs to ship — this is
           a better front door, not a replacement project.
         </p>
+      </section>
+
+      <section id="resources" class="resources">
+        <h2>Everything else, on the real site</h2>
+        <p>
+          This redesign only reworks the front door. Downloads, the manual,
+          the issue tracker, and everything else jq ships with still live on
+          <a href="https://jqlang.org/">jqlang.org</a> and
+          <a href="https://github.com/jqlang/jq">GitHub</a> — the same links
+          from the original site's own navigation, pointed straight there.
+        </p>
+        <ul class="resource-links">
+          <li><a href="https://jqlang.org/tutorial/">Tutorial</a></li>
+          <li><a href="https://jqlang.org/download/">Download</a></li>
+          <li><a href="https://jqlang.org/manual/">Manual</a></li>
+          <li><a href="https://github.com/jqlang/jq">GitHub</a></li>
+          <li><a href="https://github.com/jqlang/jq/issues">Issues</a></li>
+          <li><a href="https://play.jqlang.org">Try online!</a></li>
+          <li>
+            <a href="https://raw.githubusercontent.com/jqlang/jq/master/NEWS.md">News</a>
+          </li>
+          <li><a href="https://github.com/jqlang/jq/wiki">Wiki</a></li>
+        </ul>
       </section>
     </main>
     <footer>
